@@ -3,100 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Proyecto Introductorio para aprender la estructura y las etiquetas principales de HTML">
-    <meta name="author" content="JMX">
-
-    <title>MI PRIMER PROYECTO HTML</title>
-    <!--Texto que aparece en la pestaña del navegador-->
+    <title>Formulario</title>
 </head>
-<body id="Inicio">
-    
-    <!--ENCABEZADO DE LA PAGINA-->
-    <header>
-        <h1 style="text-align: center;">Mi primer proyecto HTML</h1>
-        <p>Un sitio para practicar la estructura y las etiquetas principales de HTML 5.</p>
-   
-
-     <!--Menu con enlaces hacia secciones de esta misma pagina-->
-        <nav aria-label="Navegacion principal">
-         <ul>
-            <li><a href="#Acerca-de"> Acerca de mi</a></li>
-            <li><a href="#Habilidades">Habilidades</a></li>
-            <li><a href="#Proyectos">Proyectos</a></li>
-            <li><a href="#Horario">Horario</a></li>
-            <li><a href="#Contacto">Contacto</a></li>
-         </ul>
-        </nav>
-
-     </header>
-
-     <!--Contenido principal de la pagina-->
-     <main>
-        <section id="Acerca-de">
-            <figure>
-                <img src="https://www.shutterstock.com/image-photo/red-fox-vulpes-closeup-portrait-260nw-2676084339.jpg" alt="JMX" width="350px">
-                <figcaption><i>Referencia a mi</i></figcaption>
-            </figure>
-            <p>Mi nombre es <strong>Xavier</strong> estoy en la materia de Progra WEB con <abbr title="HyperText Markup Languaje">HTML</abbr></p>
-
-            <p>Me interesa especialmente la <em>creacion de contentido y experencoas digitales</em>. Y quiero aprender a desarrollar accesibles y bien estructurados</p>
-        </section>
-        <hr>
-        <section id="Habilidades">
-            <h2>Habilidades e Interes</h2>
-
-            <h3>Mis intereses</h3>
-            <ul>
-                <li>Programacion</li>
-                <li>Musica</li>
-                <li>Videojuegos</li>
-                <li>Anime</li>
-            </ul>
-
-            <h3>Mis metas de aprendizaje</h3>
-            <ol>
-                <li>Comprender la estructura de HTML</li>
-                <li>Aprender a modificar la apriencia con CSS</li>
-                <li>Aprender a programar PHP</li>
-                <li>Conectar mi página con una base de datos</li>
-            </ol>
-        </section>
-
-        <section id="Proyectos">
-            <h2>Mis proyectos</h2>
-            <article>
-                <h3>Pagina Personal</h3>
-                <p>En este proyecto presentare informacion sobre mis intereses, habilidades y objetivos profesional </p>
-                <a href="https://github.com" target="_blank">Visitar GitHub</a>
-            </article>
-            <article>
-                <h3>Sitio de mi tema Favorito</h3>
-                <p>Creare un sitio informativo sobre peliculas, videojuegos, artistas, deportes o temas de mi elección.</p>
-            </article>
-        </section>
-        <hr>
-        <section id="Horario">
-            <h2>Horarios</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.</p>
-        </section>
-        <hr>
-        <section id="Contacto">
-            <h2>Contacto</h2>
-            <form action="">
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre">
-            </form>
-        </section>
-     </main>
-
-     <footer>
-        <hr>
-        <address>
-            Elaborado por JMX <br>
-            Correo: <a href="mailto:JMX@gmail.com">JMX@gmail.com</a>
-        </address>
-        <p><a href="#Inicio">Inicio</a></p>
-     </footer>
-
+<body>
+    <h1 style="text-align: center;"><i>FORMULARIO DE REGISTRO</i></h1>
+    <hr grosor="2" color="black">
+    <h2>Evento Universitario</h2>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required><br>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" min="17" max="60" name="edad" required><br>
+        <label for="fechaNacimiento"> Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br>
+        <label for="Carrera">Carrera:</label>
+        <select id="Carrera" name="Carrera" required>
+            <option value="" selected disabled>Seleccione una carrera</option>
+            <option value="Contabilidad">Contabilidad</option>
+            <option value="Tecnología">Tecnología</option>
+            <option value="Finanzas">Finanzas</option>
+            <option value="Turismo">Turismo</option>
+            <option value="Administracion"> Administración</option>
+        </select><br>
+        <label for="Turno">Selección de Turno:</label>
+        <input type="radio" id="Matutino" name="turno" value="Matutino" required>
+        <label for="Matutino">Matutino</label>
+        <input type="radio" id="Vespertino" name="turno" value="Vespertino" required>
+        <label for="Vespertino">Vespertino</label>
+        <br>
+        <input type="checkbox" id="terminos" name="terminos" required>
+        <label for="terminos">Acepto los términos y condiciones</label>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+    </form>
 </body>
 </html>
